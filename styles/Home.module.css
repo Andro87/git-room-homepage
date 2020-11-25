@@ -1,122 +1,176 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+
+
+.top{
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.navigation{
+  border: 1px solid blue;
+  background:url("../public/images/desktop-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px;
+}
+
+.menu{
+  border: 1px solid magenta;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-.main {
-  padding: 5rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.logo{
+  width: auto;
+  height: 15px;
 }
 
-.footer {
-  width: 100%;
-  height: 100px;
-  border-top: 1px solid #eaeaea;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hamburger{
+  display: none;
 }
 
-.footer img {
-  margin-left: 0.5rem;
+
+.link{
+  border: 1px solid magenta;
+  margin-left: 35px;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.linkmobile{
+  display: none;
 }
 
-.title a {
-  color: #0070f3;
+.link a {
   text-decoration: none;
+  color: var(--background);
+  margin-right: 20px;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.intro{
+  border: 1px solid;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+
+.shop{
+  color:var(--dark);
+  margin-top: 20px;
+  margin-bottom: 50px;
+  letter-spacing: 0.7rem;
+  cursor: pointer;
 }
 
-.title,
-.description {
-  text-align: center;
+.shop svg{
+  margin-left: 15px;
 }
 
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+.bottom{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.column1{
+  border: 1px solid tomato;
+  background: url("../public/images/image-about-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.grid {
+.column3{
+  border: 1px solid tomato;
+  background: url("../public/images/image-about-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.switch{
+  border:1px solid yellow;
+  background-color: var(--dark);
+  width: 100px;
+  padding: 14px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-  margin-top: 3rem;
+  justify-content: space-between;
+  position: absolute;
+  bottom:23%;
+  right: 32%;
+  cursor: pointer;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
+
+.viewportCss {
+  overflow: hidden;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.containerCss{
+  display: flex;
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.slideCss{
+  position: relative;
+  min-width: 100%;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
 
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
+@media only screen and (max-width:480px){
+  .top,.bottom{
+    grid-template-columns: repeat(1,1fr) ;
   }
+
+
+  .navigation{
+    padding: 0;
+  }
+
+  .top{
+    grid-template-rows: repeat(2,1fr);
+  }
+
+  .menu{
+    align-items: center;
+    padding: 35px;
+  }
+
+  .menumobile{
+    background-color: var(--background);
+  }
+
+  .hamburger{
+    border: 1px solid aqua;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .logo{
+    margin: 0 auto;
+  }
+
+  .link{
+    display: none;
+  }
+
+  .linkmobile{
+    display: initial;
+    margin-left: auto;
+  }
+
+  .linkmobile a {
+    text-decoration: none;
+    color: var(--dark);
+    margin-right: 30px;
+  }
+
+
+
+  .bottom{
+    grid-template-rows: repeat(3,1fr);
+  }
+
+  .shop{
+    margin-top: 80px;
+  }
+
+  
 }
