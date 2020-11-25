@@ -26,7 +26,7 @@ export default function Home() {
         <div className={styles.slideCss}> 
             <div className={styles.top}>  
 
-              <div className={styles.navigation}>
+              <div className={`${styles.navigation} ${styles.first}`}>
 
                 <div className={`${styles.menu} ${open?styles.menumobile:null}`}>
 
@@ -98,7 +98,7 @@ export default function Home() {
           <div className={styles.slideCss}> 
             <div className={styles.top}>  
 
-              <div className={styles.navigation}>
+              <div className={`${styles.navigation} ${styles.second}`}>
 
                 <div className={`${styles.menu} ${open?styles.menumobile:null}`}>
 
@@ -164,7 +164,7 @@ export default function Home() {
 
             <div className={styles.top}>  
 
-              <div className={styles.navigation}>
+              <div className={`${styles.navigation} ${styles.third}`}>
 
                 <div className={`${styles.menu} ${open?styles.menumobile:null}`}>
 
@@ -246,12 +246,27 @@ export default function Home() {
 
 
 
-      <button className={styles.switch}>
+      <div className={styles.switch}>
 
-        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
-        <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+        <button className={styles.button}
+        onClick={()=>
+        emblaApi.scrollPrev()}
+        >
 
-      </button>
+          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>          
+
+        </button>
+
+        <button className={styles.button}
+        onClick={()=>
+        emblaApi.scrollNext()}
+        >
+
+          <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/></svg>
+
+        </button>
+        
+      </div>
 
       
 

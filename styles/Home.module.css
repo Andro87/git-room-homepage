@@ -8,10 +8,21 @@
 
 .navigation{
   border: 1px solid blue;
-  background:url("../public/images/desktop-image-hero-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 35px;
+}
+
+.first{
+  background:url("../public/images/desktop-image-hero-1.jpg");
+}
+
+.second{
+  background:url("../public/images/desktop-image-hero-2.jpg");
+}
+
+.third{
+  background:url("../public/images/desktop-image-hero-3.jpg");
 }
 
 .menu{
@@ -91,6 +102,13 @@
   position: absolute;
   bottom:23%;
   right: 32%;
+  cursor: pointer;
+}
+
+.button{
+  background-color: transparent;
+  outline: none;
+  border: none;
   cursor: pointer;
 }
 
