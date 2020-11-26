@@ -27,7 +27,7 @@ export default function Home() {
 
           <div className={css(styles.menu,cond(styles.menumobile,open))}>
 
-            <button className={styles.hamburger}
+            <button type="button" className={styles.hamburger}
             onClick={()=>setOpen(!open)}
             >
 
@@ -162,7 +162,7 @@ export default function Home() {
 
         <div className={styles.switch}>
 
-          <button className={styles.button}
+          <button type="button" className={styles.button}
           onClick={()=>
           emblaApi.scrollPrev()}
           >
