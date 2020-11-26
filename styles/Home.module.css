@@ -1,38 +1,21 @@
-
-
-.top{
-  border: 1px solid red;
-  display: grid;
-  grid-template-columns: 60% 40%;
+.wrap{
+  position: relative;
 }
+
 
 .navigation{
-  border: 1px solid blue;
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 35px;
-}
-
-.first{
-  background:url("../public/images/desktop-image-hero-1.jpg");
-}
-
-.second{
-  background:url("../public/images/desktop-image-hero-2.jpg");
-}
-
-.third{
-  background:url("../public/images/desktop-image-hero-3.jpg");
+  position: absolute;
+  z-index: 2;
 }
 
 .menu{
-  border: 1px solid magenta;
   display: flex;
 }
 
 .logo{
   width: auto;
-  height: 15px;
+  height: 18px;
 }
 
 .hamburger{
@@ -41,8 +24,9 @@
 
 
 .link{
-  border: 1px solid magenta;
-  margin-left: 35px;
+  margin-left: 70px;
+  display: flex;
+  align-items: center;
 }
 
 .linkmobile{
@@ -53,7 +37,31 @@
   text-decoration: none;
   color: var(--background);
   margin-right: 20px;
+  border: 2px solid transparent;
 }
+
+.link a:hover{
+  text-decoration: none;
+  border-bottom:2px solid var(--background);
+
+}
+
+
+.top{
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.hero{
+  display: flex;
+  overflow: hidden;
+}
+
+.image{
+  object-fit: cover;
+  width: 100%;
+}
+
 
 .intro{
   border: 1px solid;
@@ -62,7 +70,7 @@
 
 .shop{
   color:var(--dark);
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 50px;
   letter-spacing: 0.7rem;
   cursor: pointer;
@@ -77,31 +85,19 @@
   grid-template-columns: 1fr 2fr 1fr;
 }
 
-.column1{
-  border: 1px solid tomato;
-  background: url("../public/images/image-about-dark.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.column3{
-  border: 1px solid tomato;
-  background: url("../public/images/image-about-light.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-
+.column1,.column3{
+  display: flex;
 }
 
 .switch{
-  border:1px solid yellow;
   background-color: var(--dark);
-  width: 100px;
-  padding: 14px;
+  width: 120px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   position: absolute;
-  bottom:23%;
-  right: 32%;
+  bottom:0;
+  left: 60%;
   cursor: pointer;
 }
 
@@ -110,8 +106,13 @@
   outline: none;
   border: none;
   cursor: pointer;
+  width: 50%;
 }
 
+.button:hover{
+  background-color: var(--grey);
+
+}
 
 .viewportCss {
   overflow: hidden;
@@ -124,16 +125,23 @@
 .slideCss{
   position: relative;
   min-width: 100%;
+  display: flex;
 }
 
 
-@media only screen and (max-width:480px){
-  .top,.bottom{
-    grid-template-columns: repeat(1,1fr) ;
+@media only screen and (max-width:900px){
+
+  .topmobile{
+    filter: brightness(50%);
   }
 
+  .top,.bottom{
+    grid-template-columns: repeat(1,1fr) ;
+
+  }
 
   .navigation{
+    width: 100%;
     padding: 0;
   }
 
@@ -142,8 +150,9 @@
   }
 
   .menu{
-    align-items: center;
     padding: 35px;
+    align-items: center;
+    width: 100%;
   }
 
   .menumobile{
@@ -151,7 +160,6 @@
   }
 
   .hamburger{
-    border: 1px solid aqua;
     display: inline-block;
     height: 30px;
     width: 30px;
@@ -178,16 +186,29 @@
     text-decoration: none;
     color: var(--dark);
     margin-right: 30px;
+    border: 2px solid transparent;
   }
 
-
+  .linkmobile a:hover{
+    text-decoration: none;
+    border-bottom:2px solid var(--dark);
+  
+  }
 
   .bottom{
     grid-template-rows: repeat(3,1fr);
   }
 
   .shop{
-    margin-top: 80px;
+    margin-top: 60px;
+  }  
+
+  .switch{
+    position: absolute;
+    bottom:50%;
+    left:unset;
+    right: 0%;
+    cursor: pointer;
   }
 
   
