@@ -109,39 +109,6 @@
     display: flex;
 }
 
-.btn_wrap {
-    background-color: var(--dark);
-    width: 90px;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 50%;
-
-    cursor: pointer;
-    right: 0;
-
-    @media screen and (min-width: 900px) {
-        width: 130px;
-        height: 60px;
-        bottom: 0;
-        left: 55%;
-        bottom: 0;
-        right: initial;
-    }
-}
-
-.button {
-    background-color: transparent;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    width: 50%;
-}
-
-.button:hover {
-    background-color: var(--grey);
-}
 .bottom_wrap {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

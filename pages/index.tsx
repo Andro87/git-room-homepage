@@ -78,6 +78,8 @@ export default function Home() {
                                             collection and make your property a
                                             reflection of you and what you love.
                                         "
+                            onPrev={() => emblaApi.scrollPrev()}
+                            onNext={() => emblaApi.scrollNext()}
                         />
                         <Slide
                             image={
@@ -103,6 +105,8 @@ export default function Home() {
                             using our store locator. Any questions?
                             Don't hesitate to contact us today.
                                         "
+                            onPrev={() => emblaApi.scrollPrev()}
+                            onNext={() => emblaApi.scrollNext()}
                         />
                         <Slide
                             image={
@@ -129,50 +133,10 @@ export default function Home() {
                             industry, we understand what customers
                             want for their home and office.
                                         "
+                            onPrev={() => emblaApi.scrollPrev()}
+                            onNext={() => emblaApi.scrollNext()}
                         />
                     </div>
-                </div>
-
-                <div className={styles.btn_wrap}>
-                    <button
-                        type="button"
-                        aria-label="previous"
-                        className={styles.button}
-                        onClick={() => emblaApi.scrollPrev()}
-                    >
-                        <svg
-                            width="14"
-                            height="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M13 0L1 12l12 12"
-                                stroke="#FFF"
-                                fill="none"
-                                fillRule="evenodd"
-                            />
-                        </svg>
-                    </button>
-
-                    <button
-                        type="button"
-                        aria-label="next"
-                        className={styles.button}
-                        onClick={() => emblaApi.scrollNext()}
-                    >
-                        <svg
-                            width="14"
-                            height="24"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M1 0l12 12L1 24"
-                                stroke="#FFF"
-                                fill="none"
-                                fillRule="evenodd"
-                            />
-                        </svg>
-                    </button>
                 </div>
             </div>
             <section
